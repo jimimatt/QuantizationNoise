@@ -1,0 +1,49 @@
+[project]
+name = "quantization-noise"
+version = "0.1.0"
+description = "Inspect and evaluate approaches for dequantization."
+authors = [
+    {name = "Matthias Telöken", email = "matthias.teloeken@posteo.de"},
+]
+dependencies = [
+    "matplotlib>=3.10.1",
+    "numpy>=2.2.4",
+    "scikit-learn>=1.6.1",
+]
+requires-python = ">=3.12"
+readme = "README.md"
+license = "BSD-3-Clause"
+license-files = ["LICEN[CS]E*"]
+
+[tool.ruff]
+line-length = 120
+indent-width = 4
+
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [
+    "A",  # flake8-builtins
+    "ANN",  # mypy
+    "ARG",  # flake8-unused-arguments
+    "B",  # Bugbear
+    "C4",  # flake8-comprehensions
+    "DTZ",  # flake8-datetimez
+    "E",  # pycodestyle
+    "F",  # Pyflakes
+    "FLY",  # flynt
+    "FA",  # flake8-fututre-annotations
+    "I",  # isort
+    "PTH",  # flake8-use-pathlib
+    "SIM",  # flake8-simplify
+    "TCH",  # flake8-type-checking
+    "UP",  # pyupgrade
+    "W",  # pycodestyle
+    "C90",  # mccabe
+]
+
+[tool.ruff.format]
+quote-style = "preserve"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
